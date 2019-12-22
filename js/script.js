@@ -3,7 +3,8 @@ window.addEventListener('DOMContentLoaded', function(){
 
 let tab = document.querySelectorAll('.info-header-tab'),
     info = document.querySelector('.info-header'),
-    tabContent = document.querySelectorAll('.info-tabcontent');
+    tabContent = document.querySelectorAll('.info-tabcontent'),
+    descriptionBtn = document.querySelectorAll('.description-btn');
 
 function hideTabContent(a){
     for (let i = a;i < tabContent.length;i++){
@@ -13,7 +14,16 @@ function hideTabContent(a){
     }
 }
 
+function addModalOnDescriptionBtn(c){
+    descriptionBtn[c].addEventListener('click', function(){
+        overlay.style.display = 'block';
+        this.classList.add('more-splash');
+        document.body.style.overflow = 'hidden';
+    });
+}
+
 hideTabContent(1);
+addModalOnDescriptionBtn(0);
 
 function showTabContent(b){
     if (tabContent[b].classList.contains('hide')){
@@ -29,6 +39,7 @@ info.addEventListener('click', function(event){
             if(target == tab[i]){
                 hideTabContent(0);
                 showTabContent(i);
+                addModalOnDescriptionBtn(i);
                 break;
             }
         }
@@ -78,10 +89,30 @@ let deadLine = '2019-12-22';
     }
     
 
- }
+    }
 
- setClock('timer', deadLine);
+    setClock('timer', deadLine);
 
+    // Modal window
+
+    let more = document.querySelector('.more'),
+        overlay = document.querySelector('.overlay'),
+        close = document.querySelector('.popup-close');
+
+    more.addEventListener('click', function(){
+        overlay.style.display = 'block';
+        this.classList.add('more-splash');
+        document.body.style.overflow = 'hidden';
+    });
+
+    close.addEventListener('click', function(){
+    overlay.style.display = 'none';
+    more.classList.remove('more-splash');
+    document.body.style.overflow = '';
+    });
+
+    
+        
 
 
 });
