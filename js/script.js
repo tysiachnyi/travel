@@ -233,17 +233,17 @@ window.addEventListener('DOMContentLoaded', function() {
         daysSum = 0,
         total = 0;
 
-    totalValue.innerHTML = 0;
+    totalValue.innerHTML = 0 + " uah";
 
     persons.addEventListener('change', function(){
         personsSum =+ this.value;
-        total = (daysSum + personsSum)*4000;
+        total = (daysSum + personsSum)*2000;
         console.log('personsSum ' + personsSum);
         console.log('restDays.value ' + restDays.value);
         if(restDays.value == '' || personsSum == 0 || persons.value == ''  || daysSum == 0){
             totalValue.innerHTML = 0;
         }else{
-            totalValue.innerHTML = total;
+            totalValue.innerHTML = total + " uah";
         }
     });
 
@@ -255,7 +255,7 @@ window.addEventListener('DOMContentLoaded', function() {
         if(persons.value == ''  || daysSum == 0 || restDays.value == '' || personsSum == 0){
             totalValue.innerHTML = 0;
         }else{
-            totalValue.innerHTML = total;
+            totalValue.innerHTML = total + " uah";
         }
     });
 
@@ -264,7 +264,7 @@ window.addEventListener('DOMContentLoaded', function() {
             totalValue.innerHTML = 0;
         }else{
             let a = total;
-            totalValue.innerHTML = a * this.options[this.selectedIndex].value;
+            totalValue.innerHTML = a * this.options[this.selectedIndex].value  + " uah";
         }
     });
 
