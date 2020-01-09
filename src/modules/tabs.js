@@ -1,8 +1,8 @@
-function tabs(){
+export function tabs(){
     let tab = document.querySelectorAll('.info-header-tab'),
         info = document.querySelector('.info-header'),
         descriptionBtn = document.querySelectorAll('.description-btn'),
-        overlay = document.querySelector('.overlay')
+        overlay = document.querySelector('.overlay'),
         tabContent = document.querySelectorAll('.info-tabcontent');
 
     function hideTabContent(a) {
@@ -47,4 +47,4 @@ function tabs(){
 
 }
 
-module.exports = tabs;
+//module.exports = tabs;

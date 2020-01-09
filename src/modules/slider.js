@@ -1,4 +1,4 @@
-function slider(){
+export function slider(){
     // slider
     let slideIndex = 1,
         slides = document.querySelectorAll('.slider-item'),
@@ -50,4 +50,4 @@ function slider(){
 
 }
 
-module.exports = slider;
+//module.exports = slider;

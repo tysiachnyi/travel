@@ -1,6 +1,10 @@
-function timer(){
+export function timer(){
 
-    let deadline = '2018-11-21';
+    let deadline = new Date();
+    let dd = String(deadline.getDate() + 1).padStart(2, '0');// current date + 1
+    let mm = String(deadline.getMonth() + 1).padStart(2, '0'); //January is 0!
+    let yyyy = deadline.getFullYear();
+    deadline = yyyy + '/' + mm + '/' + dd;
 
     function getTimeRemaining(endtime) {
         let t = Date.parse(endtime) - Date.parse(new Date()),
@@ -50,4 +54,4 @@ function timer(){
 
 }
 
-module.exports = timer;
+//module.exports = timer;

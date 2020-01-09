@@ -1,4 +1,4 @@
-function calc(){
+export function calc(){
     // calc
 
     let persons = document.querySelectorAll('.counter-block-input')[0],
@@ -48,4 +48,4 @@ function calc(){
 
 }
 
-module.exports = calc;
+//module.exports = calc;

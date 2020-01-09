@@ -1,4 +1,4 @@
-function modal(){
+export function modal(){
 
     let more = document.querySelector('.more'),
         overlay = document.querySelector('.overlay'),
@@ -17,4 +17,4 @@ function modal(){
     });
 }
 
-module.exports = modal;
+// module.exports = modal;
